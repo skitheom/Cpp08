@@ -6,18 +6,18 @@
 #    By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 16:15:58 by sakitaha          #+#    #+#              #
-#    Updated: 2025/01/21 03:25:54 by sakitaha         ###   ########.fr        #
+#    Updated: 2025/01/21 05:09:29 by sakitaha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98 -MMD -MP
 
-SRCS     := main.cpp
+SRCS     :=
 OBJS     := $(SRCS:.cpp=.o)
 DEPS     := $(OBJS:.o=.d)
 
-NAME     := ex02
+NAME     :=
 
 all: $(NAME)
 

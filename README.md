@@ -9,6 +9,7 @@
 - STLを用いて指定された値をリスト内に探すtemplate関数を作成
 - `T::iterator it`: データ型の操作が簡便に
 - `std::find` / `std::find_if` : 手動で探索する必要はない
+- associative containers
 
 ### Ex01: Span
 -
@@ -25,3 +26,13 @@
 [find() in C++ STL](https://www.geeksforgeeks.org/std-find-in-cpp/)
 
 [トップページ | Programming Place Plus　C++編](https://programming-place.net/ppp/contents/cpp/index.html)
+
+[Sequence vs Associative containers in C++](https://www.geeksforgeeks.org/sequence-vs-associative-containers-cpp/)
+
+[std::deque](https://en.cppreference.com/w/cpp/container/deque)
+
+[メモの日々 GCCの依存関係ファイル出力用のオプション](http://ogawa.s18.xrea.com/tdiary/20171121p01.html)
+
+[プリプロセッサオプション](https://kazmax.zpp.jp/cmd/g/gcc.1.html#ah_8)
+
+[LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html)

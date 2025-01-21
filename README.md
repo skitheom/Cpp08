@@ -10,6 +10,12 @@
 - `T::iterator it`: データ型の操作が簡便に
 - `std::find` / `std::find_if` : 手動で探索する必要はない
 
+### Ex01: Span
+-
+
+### Ex02: Mutated abomination
+-
+
 ## References
 
 [CPP Module 08(For 42 École Students Only)](https://projects.intra.42.fr/projects/cpp-module-08)

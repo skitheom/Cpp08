@@ -6,7 +6,7 @@
 #    By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 16:15:58 by sakitaha          #+#    #+#              #
-#    Updated: 2025/01/21 05:09:29 by sakitaha         ###   ########.fr        #
+#    Updated: 2025/01/25 15:56:50 by sakitaha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,10 +37,13 @@ fclean: clean
 
 re: fclean all
 
-test: $(NAME)
+run: $(NAME)
 	@echo "== Running Tests  =="
 	./$(NAME)
 	@echo "== Tests Completed =="
+
+test: CXXFLAGS += -DDISPLAY_DEBUG_MSG
+test: re run
 
 debug: CXXFLAGS += -fsanitize=address -g
 debug: $(NAME)
@@ -49,4 +52,4 @@ debug: $(NAME)
 valgrind: all
 	valgrind --leak-check=full ./$(NAME)
 
-.PHONY: all clean fclean re test debug valgrind
+.PHONY: all clean fclean re run test debug valgrind

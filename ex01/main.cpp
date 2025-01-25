@@ -6,13 +6,14 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:56:20 by sakitaha          #+#    #+#             */
-/*   Updated: 2025/01/25 14:59:30 by sakitaha         ###   ########.fr       */
+/*   Updated: 2025/01/25 22:57:24 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <exception>
 #include <iostream>
+#include <limits>
 
 void displaySpan(Span &sp) {
   try {

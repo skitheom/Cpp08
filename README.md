@@ -7,12 +7,16 @@
 ## Exercises
 ### Ex00: Easy find
 - STLを用いて指定された値をリスト内に探すtemplate関数を作成
-- `T::iterator it`: データ型の操作が簡便に
-- `std::find` / `std::find_if` : 手動で探索する必要はない
-- associative containers
+- `T::iterator it`: データ型の操作が簡便になる
+- `std::find` / `std::find_if` : 手動探索は不要
+- associative containers 対応不要
+- 値が存在しない場合にexceptionまたはエラー値
+- const考慮 `const_iterator`
 
 ### Ex01: Span
--
+- 最大N個のint型数値を保存できるSpanクラス
+- overflowに注意
+- spanとは2点間の差（絶対値）
 
 ### Ex02: Mutated abomination
 -
@@ -36,3 +40,7 @@
 [プリプロセッサオプション](https://kazmax.zpp.jp/cmd/g/gcc.1.html#ah_8)
 
 [LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html)
+
+[std::multiset](https://en.cppreference.com/w/cpp/container/multiset)
+
+[C++ 98 Standard](https://www.geeksforgeeks.org/cpp-98-standard/)

@@ -19,7 +19,8 @@
 - spanとは2点間の差（絶対値）
 
 ### Ex02: Mutated abomination
--
+- std::stackを継承したMutantStackテンプレートクラス
+- pop, push, top, ... , などはstd::stackから継承できる
 
 ## References
 
@@ -41,3 +42,4 @@
 
 [std::multiset](https://en.cppreference.com/w/cpp/container/multiset)
 
+[How to Write Our Own STL Container?](https://www.geeksforgeeks.org/how-to-write-our-own-stl-container-cpp/)

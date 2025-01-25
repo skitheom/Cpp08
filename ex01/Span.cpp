@@ -6,12 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:53:28 by sakitaha          #+#    #+#             */
-/*   Updated: 2025/01/25 14:57:38 by sakitaha         ###   ########.fr       */
+/*   Updated: 2025/01/26 01:34:04 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <algorithm>
+#include <limits>
 #include <sstream>
 #include <stdexcept>
 

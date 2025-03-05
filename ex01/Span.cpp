@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:53:28 by sakitaha          #+#    #+#             */
-/*   Updated: 2025/01/26 01:34:04 by sakitaha         ###   ########.fr       */
+/*   Updated: 2025/03/06 00:14:05 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 #include <stdexcept>
 
 const unsigned int Span::kMaxSpan = std::numeric_limits<unsigned int>::max();
-
-Span::Span() : data_(), maxSize_(0), minSpan_(kMaxSpan) {
-  displayDebugMsg("Span default constructor called");
-}
 
 Span::Span(unsigned int maxSize)
     : data_(), maxSize_(maxSize), minSpan_(kMaxSpan) {
@@ -75,26 +71,9 @@ unsigned int Span::longestSpan() const {
 }
 
 unsigned int Span::calculateSpan(int n1, int n2) const {
-  long long diff = static_cast<long long>(n1) - static_cast<long long>(n2);
-  diff = std::abs(diff);
+  long diff = static_cast<long>(n1) - static_cast<long>(n2);
+  diff = (diff >= 0) ? diff : -diff;
   return static_cast<unsigned int>(diff);
-}
-
-void Span::updateMinSpan(int n1, int n2) {
-  unsigned int currentSpan = calculateSpan(n1, n2);
-  minSpan_ = std::min(minSpan_, currentSpan);
-}
-
-void Span::processPrevValue(std::multiset<int>::iterator &it, int n) {
-  std::multiset<int>::iterator prevIt = it;
-  --prevIt;
-  updateMinSpan(n, *prevIt);
-}
-
-void Span::processNextValue(std::multiset<int>::iterator &it, int n) {
-  std::multiset<int>::iterator nextIt = it;
-  ++nextIt;
-  updateMinSpan(*nextIt, n);
 }
 
 void Span::evaluateMinSpan(std::multiset<int>::iterator &it, int n) {
@@ -110,9 +89,30 @@ void Span::evaluateMinSpan(std::multiset<int>::iterator &it, int n) {
   }
 }
 
+void Span::processPrevValue(std::multiset<int>::iterator &it, int n) {
+  std::multiset<int>::iterator prevIt = it;
+  --prevIt;
+  updateMinSpan(n, *prevIt);
+}
+
+void Span::processNextValue(std::multiset<int>::iterator &it, int n) {
+  std::multiset<int>::iterator nextIt = it;
+  ++nextIt;
+  updateMinSpan(*nextIt, n);
+}
+
+void Span::updateMinSpan(int n1, int n2) {
+  unsigned int currentSpan = calculateSpan(n1, n2);
+  minSpan_ = std::min(minSpan_, currentSpan);
+}
+
 void Span::displayDebugMsg(const std::string &msg) const {
 #ifdef DISPLAY_DEBUG_MSG
   std::cout << msg << std::endl;
 #endif
   (void)msg;
+}
+
+Span::Span() : data_(), maxSize_(0), minSpan_(kMaxSpan) {
+  displayDebugMsg("Span default constructor called");
 }

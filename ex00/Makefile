@@ -6,7 +6,7 @@
 #    By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 16:15:58 by sakitaha          #+#    #+#              #
-#    Updated: 2025/01/24 13:05:56 by sakitaha         ###   ########.fr        #
+#    Updated: 2025/03/05 18:36:19 by sakitaha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ fclean: clean
 
 re: fclean all
 
-run: $(NAME)
+test: $(NAME)
 	@echo "== Running Tests  =="
 	./$(NAME)
 	@echo "== Tests Completed =="

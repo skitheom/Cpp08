@@ -40,7 +40,6 @@ void sampleTest() {
   try {
     std::cout << sp.shortestSpan() << std::endl;
     std::cout << sp.longestSpan() << std::endl;
-
   } catch (const std::exception &e) {
     std::cout << "Error: " << e.what() << std::endl;
   }

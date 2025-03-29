@@ -37,7 +37,7 @@ fclean: clean
 
 re: fclean all
 
-test: $(NAME)
+run: $(NAME)
 	@echo "== Running Tests  =="
 	./$(NAME)
 	@echo "== Tests Completed =="
@@ -49,4 +49,4 @@ debug: $(NAME)
 valgrind: all
 	valgrind --leak-check=full ./$(NAME)
 
-.PHONY: all clean fclean re test debug valgrind
+.PHONY: all clean fclean re run debug valgrind
